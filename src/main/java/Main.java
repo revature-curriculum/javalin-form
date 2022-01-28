@@ -26,6 +26,8 @@ public class Main {
 
         app.post("/getForm", postFormHandler);
 
+        // TO-DO
+
     }
 
     public static Handler getFormHandler = ctx -> {
@@ -39,10 +41,11 @@ public class Main {
         String itemName = ctx.formParam("name");
 
         groceryList.addItem(itemName);
-        // ctx.render("index.jte", Collections.singletonMap("groceryList", groceryList));
 
         ctx.redirect("/");
 
     };
+
+    // TO-DO
 
 }
