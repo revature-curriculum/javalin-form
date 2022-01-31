@@ -2,10 +2,6 @@
 
 <head>
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.min.css">
-
-
-
-
 </head>
 
 <body>
@@ -13,9 +9,11 @@
 
     <form method="post">
 
-        <h1>Add a grocery item</h1>
+        <h1>Add a shopping item</h1>
         <label>Item name</label>
-        <input type="text" name="foodName" placeholder="Delicious Food" required value="">
+        <input type="text" name="itemName" placeholder="Delicious Food" required value="">
+        <label>Item price</label>
+        <input type="number" step="0.01" name="itemPrice" placeholder="10.0" required value="">
         <input type="submit" value="Add">
     </form>
 

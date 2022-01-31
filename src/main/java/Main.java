@@ -1,25 +1,23 @@
 import io.javalin.Javalin;
 import java.util.*;
 import io.javalin.http.Handler;
-import objects.ShoppingList;
+import objects.ShoppingItem;
 
 public class Main {
 
-    static ShoppingList groceryList;
+    static ArrayList<ShoppingItem> shoppingList = new ArrayList<>();
 
     // TO-DO
 
     public static void main(String[] args) {
 
-        groceryList = new ShoppingList();
-
-        groceryList.addItem("Eggs");
-        groceryList.addItem("Bread");
+        shoppingList.add(new ShoppingItem("Shirt", 30.0f));
+        shoppingList.add(new ShoppingItem("Pants", 35.0f));
 
         Javalin app = Javalin.create().start(4100);
         
         app.get("/", ctx -> { 
-            ctx.render("index.jte", Collections.singletonMap("groceryList", groceryList));
+            ctx.render("index.jte", Collections.singletonMap("shoppingList", shoppingList));
         });
 
         app.get("/getForm", getFormHandler);
@@ -38,9 +36,10 @@ public class Main {
 
     public static Handler postFormHandler = ctx -> {
 
-        String itemName = ctx.formParam("foodName");
+        String itemName = ctx.formParam("itemName");
+        float itemPrice = Float.parseFloat(ctx.formParam("itemPrice"));
 
-        groceryList.addItem(itemName);
+        shoppingList.add(new ShoppingItem(itemName, itemPrice));
 
         ctx.redirect("/");
 
