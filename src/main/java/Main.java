@@ -38,7 +38,7 @@ public class Main {
 
     public static Handler postFormHandler = ctx -> {
 
-        String itemName = ctx.formParam("name");
+        String itemName = ctx.formParam("foodName");
 
         groceryList.addItem(itemName);
 
