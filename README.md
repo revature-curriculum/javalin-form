@@ -12,7 +12,7 @@ In this lab we will cover how add forms to your web application using Javalin an
 3. In Main.java add the required fields, methods and handlers for the SeaCreatures to be sent to seaCreature.jte. For reference see the fields, methods and handlers for ShoppingItem in Main.java. Your code should be written underneath the To-Do comments. Additionally in Main.java add the required code to receive sea creature data from the form you will create in seaCreatureForm.jte.
 4. In src -> main -> jte -> seaCreature.jte modify the file so it outputs a list of sea creatures with a sentence using the various fields you created in your SeaCreature.java file. See sample output for reference.
 5. In src -> main -> jte -> seaCreatureForm.jte modify the file to have a form so users can create a new sea creature with all the required fields. The user should be able to see the new sea creature if they go to the list of sea creatures route.
-
+6. In src -> main -> jte -> index.jte add a link leading to the seaCreatures list page.
 
 ---
 ### Sample Output
