@@ -1,8 +1,3 @@
-@import objects.ShoppingItem
-@import java.util.*
-@param ArrayList<ShoppingItem> shoppingList
-
-
 <html lang="en">
 
 <head>
@@ -10,16 +5,7 @@
 </head>
 <body>
 
-    <h3>Welcome</h3>
-    <h3>Hello visitor!</h3>
-
-    @for(ShoppingItem item : shoppingList)
-    <li>${item.getName()} has a price of ${item.getPrice()}</li>
-    @endfor
-
-    <br>
-
-    <a href="/getForm">Add Item</a>
+    <a href="/shoppingList">See Shopping List</a>
 
 </body>
 </html>

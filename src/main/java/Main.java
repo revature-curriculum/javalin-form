@@ -17,7 +17,11 @@ public class Main {
         Javalin app = Javalin.create().start(4100);
         
         app.get("/", ctx -> { 
-            ctx.render("index.jte", Collections.singletonMap("shoppingList", shoppingList));
+            ctx.render("index.jte");
+        });
+
+        app.get("/shoppingList", ctx -> {
+          ctx.render("shoppingList.jte", Collections.singletonMap("shoppingList", shoppingList));
         });
 
         app.get("/getForm", getFormHandler);
