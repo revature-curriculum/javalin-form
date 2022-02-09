@@ -31,7 +31,7 @@ public class Main {
     app.post("/getForm", postFormHandler);
 
     app.get("/seaCreatures", ctx -> { 
-      ctx.render("seaCreature.jte", Collections.singletonMap("seaCreatures", seaCreatures));
+      ctx.render("seaCreatures.jte", Collections.singletonMap("seaCreatures", seaCreatures));
     });
 
     app.get("/getscForm", getscFormHandler);
