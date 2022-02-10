@@ -8,11 +8,14 @@ In this lab we will cover how add forms to your web application using Javalin an
 ### Steps
 
 1. In src -> main -> java -> objects, add your fields and getters to your SeaCreature.java file. Make sure to have at least 3 fields in this file. 
-2. In src -> main -> java -> Main.java, create an ArrayList of SeaCreature objects. Add at least 4 SeaCreature objects to your list.
-3. In Main.java add the required fields, methods, routes and handlers for the SeaCreatures to be sent to seaCreatures.jte. For reference see the fields, methods and handlers for ShoppingItem in Main.java. Your code should be written underneath the To-Do comments. Additionally in Main.java add the required code to receive sea creature data from the form you will create in seaCreatureForm.jte.
-4. In src -> main -> jte -> seaCreatures.jte modify the file so it outputs a list of sea creatures with a sentence using the various fields you created in your SeaCreature.java file. See sample output for reference. Add a link leading to the seaCreatureForm.
-5. In src -> main -> jte -> seaCreatureForm.jte modify the file to have a form so users can create a new sea creature with all the required fields. The user should be able to see the new sea creature if they go to the list of sea creatures route.
-6. In src -> main -> jte -> index.jte add a link leading to the seaCreatures list page.
+2. In src -> main -> java -> Main.java, create an ArrayList of SeaCreature objects. 
+     * Add at least 4 SeaCreature objects to your list.  
+3. In Main.java, add the required fields, methods, routes and handlers for the SeaCreatures to be sent to seaCreatures.jte. For reference see the fields, methods and handlers for ShoppingItem in Main.java. Your code should be written underneath the To-Do comments. 
+4. Additionally, in Main.java, add the required code to receive sea creature data from the form you will create in seaCreatureForm.jte.
+5. In src -> main -> jte -> seaCreatures.jte, modify the file so it outputs a list of sea creatures with a sentence using the various fields you created in your SeaCreature.java file. See sample output for reference. 
+6. In the same file as the step above, add a link leading to the seaCreatureForm.
+7. In src -> main -> jte -> seaCreatureForm.jte, modify the file to have a form so users can create a new sea creature with all the required fields. The user should be able to see the new sea creature if they go to the list of sea creatures route.
+8. In src -> main -> jte -> index.jte add a link leading to the seaCreatures list page.
 
 
 ---
