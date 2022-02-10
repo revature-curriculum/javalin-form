@@ -7,16 +7,30 @@ In this lab we will cover how add forms to your web application using Javalin an
 ---
 ### Steps
 
-1. In src -> main -> java -> objects, add your fields and getters to your SeaCreature.java file. Make sure to have at least 3 fields in this file. 
-2. In src -> main -> java -> Main.java, create an ArrayList of SeaCreature objects. 
-     * Add at least 4 SeaCreature objects to your list.  
-3. In Main.java, add the required fields, methods, routes and handlers for the SeaCreatures to be sent to seaCreatures.jte. For reference see the fields, methods and handlers for ShoppingItem in Main.java. Your code should be written underneath the To-Do comments. 
-4. Additionally, in Main.java, add the required code to receive sea creature data from the form you will create in seaCreatureForm.jte.
-5. In src -> main -> jte -> seaCreatures.jte, modify the file so it outputs a list of sea creatures with a sentence using the various fields you created in your SeaCreature.java file. See sample output for reference. 
-6. In the same file as the step above, add a link leading to the seaCreatureForm.
-7. In src -> main -> jte -> seaCreatureForm.jte, modify the file to have a form so users can create a new sea creature with all the required fields. The user should be able to see the new sea creature if they go to the list of sea creatures route.
-8. In src -> main -> jte -> index.jte add a link leading to the seaCreatures list page.
-
+1. In src -> main -> java -> objects -> SeaCreature.java add at least three fields. One should be the name of the animal, and another the color of the animal. You can choose the rest.
+2. Create a constructor for the class.
+3. Create getters for all the fields. These getters should be public so other files can access them.
+4. In src -> main -> java -> Main.java, create an ArrayList of SeaCreature objects. This arraylist should be static and be created outside the main method.
+5. Add at least 4 SeaCreature objects to your list. This should be done in the main method. See the ShoppingItems reference example in the same file.
+6. Create a handler that will render seaCreatures.jte and send it your list of SeaCreature objects.
+7. Create a route for the handler.
+9. In src -> main -> jte -> seaCreatures.jte add the required imports and parameters.
+    * Remember to import java.util.* for the arraylist.
+    * Remember to use the same name for the parameter and the key for the singletonMap.
+10. Create a for loop inside the body tags. This for loop should iterate through all the sea creatures with a sentence using the various fields you created in your sea creature class file. See sample output for reference.
+    * You can use a getter with ${seaCreature.getName()}.
+11. Create a link that goes back to the index page (route is normally "/" for index.jte).
+12. Create a link that goes to the seaCreatureForm route that you will create.
+13. In the Main.java class create a handler that will create variables and set them to inputs from the formParameters of the sea creature form.
+    * For example if you had a size field: int size = ctx.formParam("size");
+    * Do this for all the fields you have.
+14. Create a new seaCreature object with the variables you have created.
+15. Add this new sea creature to the arraylist.
+16. In src -> main -> jte -> seaCreatureForm.jte create a form enclosed in the body tag.
+17. Add fields to the form for all the fields you need to create a new sea creature (like name, color, size).
+    * Make sure to add a name to each form input so you can receive them from your form parameters in the handler you created.
+18. Add a link leading back to the seaCreatures list route.
+19. Run the code, add a sea creature using the form. Now go to the list page and see if the new sea creature has been added to the list!
 
 ---
 ### Sample Output
